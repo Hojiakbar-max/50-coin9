@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    background: #d9d9d9;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 2px;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Pastdagi katta kartalar */
+.card.wide {
+    grid-column: span 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
